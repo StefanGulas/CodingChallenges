@@ -7,9 +7,11 @@ namespace FizzBuzz
     static void Main(string[] args)
     {
 
-      var fizzBuzz = new DetermineFizzBuzz();
+      //var fizzBuzz = new DetermineFizzBuzz();
+      //fizzBuzz.Determine(100, 3, 5);
 
-      fizzBuzz.Determine(100, 3, 5);
+      var fizzBuzzTernary = new TernaryDetermine();
+      fizzBuzzTernary.Determine(20, 3, 5);
       
       //for (int i = 0; i < 100; i++)
       //{
