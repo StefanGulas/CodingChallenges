@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using CodingChallenges;
 using NUnit.Framework;
 
@@ -18,6 +17,17 @@ namespace CodingChallengesTests
       char prefix = 'a';
       var actualListString = autoComplete.GetWords(testListString, prefix);
       
+      Assert.IsTrue(actualListString.SequenceEqual(expectedListString));
+    }
+    [Test]
+    public void Test2()
+    {
+      var autoComplete = new Autocomplete();
+      var expectedListString = new List<string>() { "dba", "dcd",  };
+      var testListString = new List<string>() { "aba", "acd", "acd", "dba", "xgasöl", "dcd", "öfaäe" };
+      char prefix = 'd';
+      var actualListString = autoComplete.GetWords(testListString, prefix);
+
       Assert.IsTrue(actualListString.SequenceEqual(expectedListString));
     }
   }
