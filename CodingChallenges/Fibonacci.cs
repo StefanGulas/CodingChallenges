@@ -2,7 +2,7 @@
 
 namespace CodingChallenges
 {
-  public class Fibonacci
+  public class Fibonacci : IFibonacci
   {
     public List<long> CalculateFibonacci(long position)
     {
