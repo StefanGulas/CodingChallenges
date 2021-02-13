@@ -4,7 +4,11 @@ using System.Text;
 
 namespace CodingChallenges
 {
-    public class ReverseString
+    public class ReverseStringSolution
     {
+        public void ReverseString(char[] s)
+        {
+
+        }
     }
 }
