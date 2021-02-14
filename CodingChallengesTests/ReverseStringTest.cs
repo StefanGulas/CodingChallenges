@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using NUnit;
+using CodingChallenges;
+using NUnit.Framework;
 
 namespace CodingChallengesTests
 {
@@ -10,11 +10,11 @@ namespace CodingChallengesTests
         [Test]
         public void Equals0IfPositionIs0()
         {
-            var expectedFibonacciList = new List<long>() { 0 };
-            int position = 0;
-            var actualFibonacciList = fibonacci.CalculateFibonacci(position);
-
-            Assert.IsTrue(actualFibonacciList.SequenceEqual(expectedFibonacciList));
+            char[] expected = new[] { 'o', 'l', 'l', 'e', 'h' };
+            ReverseStringSolution reverseStringSolution = new ReverseStringSolution();
+            char[] input = new[] { 'h', 'e', 'l', 'l', 'o' };
+            char[] actual = reverseStringSolution.ReverseString(input);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
