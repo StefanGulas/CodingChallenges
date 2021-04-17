@@ -20,7 +20,8 @@ namespace CodingChallenges
                 i++;
                 j--;
             }
-            return result.ToArray();
+            s = result.ToArray();
+            return s;
         }
     }
 }
