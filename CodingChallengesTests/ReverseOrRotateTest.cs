@@ -6,16 +6,26 @@ using CodingChallenges;
 
 namespace CodingChallengesTests
 {
-    public class ReverseOrRotateTest
+
+    [TestFixture]
+    public static class ReverseOrRotateTest
     {
-        [Test]
-        public void Equals0IfPositionIs0()
+
+        private static void testing(string actual, string expected)
         {
-            char[] expected = new[] { 'o', 'l', 'l', 'e', 'h' };
-            ReverseStringSolution reverseStringSolution = new ReverseStringSolution();
-            char[] input = new[] { 'h', 'e', 'l', 'l', 'o' };
-            char[] actual = reverseStringSolution.ReverseString(input);
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public static void test1()
+        {
+            Console.WriteLine("Testing RevRot");
+            testing(ReverseOrRotate.RevRot("1234", 0), "");
+            testing(ReverseOrRotate.RevRot("", 0), "");
+            testing(ReverseOrRotate.RevRot("1234", 5), "");
+            String s = "733049910872815764";
+            testing(ReverseOrRotate.RevRot(s, 5), "330479108928157");
+        }
     }
+    
 }
